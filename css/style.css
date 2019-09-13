@@ -1,0 +1,423 @@
+*{
+    box-sizing: border-box;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+html{
+    height: 100vh;
+    min-width: 900px;
+    position: relative;
+    transform: translateZ(0);
+    background: url("https://www.bkash.com/sites/default/files/landing_02.jpg?") no-repeat center/ contain;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/*.................Header................*/
+.my_header{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(197, 188, 188);
+    padding-bottom: 8px;
+}
+.my_header .left_side{
+    height: 100%;
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+}
+.my_header .left_side > #logo_link{
+    display: inline-block;
+    height: 100%;
+    width: 120px;
+    margin-left: 20px;
+}
+.my_header .left_side #logo_link img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.my_header .left_side .go_app{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.my_header .left_side .go_app .app_link{
+    display: inline-block;
+    font-size: 13px;
+    position: relative;
+    color: #0071bb;
+}
+.app_link:hover{
+    text-decoration: underline;
+}
+.go_app .app_link::after{
+    content: "";
+    position: absolute;
+    border: 5px solid;
+    border-color: transparent transparent transparent #D02053;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+.right_side{
+    width: 260px;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+.right_side input[type='search']{
+    width: 150px;
+    padding: 5px 0px 5px 5px;
+    transition: 1s;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 0px 1px gray;
+}
+.right_side input[type='search']:focus{
+    width: 200px;
+}
+.right_side #search_bg{
+    display: inline-block;
+    width: 30px;
+    height: 28px;
+    background: url('https://i.imgur.com/UiAhpwE.png') no-repeat 0 0/ 100% 100%;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: middle;
+    margin-left: -5px;
+    margin-top:-3px;
+    border-radius: 0px 3px 3px 0px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.language{
+    padding-top: 5px;
+}
+.language a:last-child{
+    color: #0071bb;
+}
+.language a:last-child::before{
+    content: '/';
+    color: initial;
+    margin-right: 5px;
+}
+/*.......Left Fixed Aside......*/
+aside.left_fixed{
+    position: fixed;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 220px;
+    overflow: hidden;
+}
+aside.left_fixed .aside_link{
+    display: block;
+    padding: 15px 0px 15px 8px;
+    margin-bottom: 8px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: #E13068 url("https://i.imgur.com/QghyLbp.png") no-repeat;
+    transform: translateX(-69%);
+    transition: 1s;
+}
+aside.left_fixed .aside_link:hover{
+    transform: translateX(-5px);
+}
+aside.left_fixed .aside_link:nth-of-type(1){
+    background-position: 95% 28%;
+}
+aside.left_fixed .aside_link:nth-of-type(2){
+    background-position: 95% -2%;
+}
+aside.left_fixed .aside_link:nth-of-type(3){
+    background-position: 95% 57%;
+}
+aside.left_fixed .aside_link:nth-of-type(4){
+    background-position: 95% 83%;
+}
+/*............Right Side Aside..........*/
+aside.right_fixed{
+    position: fixed;
+    top: 50%;
+    right: 0px;
+    width: 40px;
+    height: 150px;
+    transform: translateY(-50%);
+
+}
+aside.right_fixed .aside_link{
+    display: inline-block;
+    background: #D8D8D8;
+    width: 30px;
+    height: 30px;
+    margin: 3px;
+    text-align: center;
+    line-height: 30px;
+    transition: 1s;
+    border-radius: 3px;
+}
+aside.right_fixed .aside_link:hover{
+    transform: translateX(-20px);
+}
+aside.right_fixed .aside_link i{
+    font-size: 18px;
+    color: #D02053;
+}
+
+
+
+
+
+
+
+
+
+
+/*.......................Footer Side..............*/
+footer{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+footer > ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #D02053;
+}
+footer > ul > .list_item{
+    display: block;
+    width: 19%;
+    border-left: 1px solid rgba(128, 128, 128,.6);
+    position: relative;
+}
+footer ul > .list_item:last-of-type{
+    border-right: 1px solid rgba(128,128,128,.6);
+}
+footer > ul > .list_item > .list_link{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+footer > ul > .list_item > .list_link > img{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+}
+/*...............DropDown Menu ...........*/
+.dropdown_menu{
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    background: #E43573;
+    display: block;
+    cursor: pointer;
+    
+}
+.dr_height{
+    top: -350px;
+    
+}
+.up_hover{
+    transform: scaleY(0);
+    transition: .5s;
+    transform-origin: bottom;
+}
+footer ul li:hover .up_hover{
+    transform: scaleY(1);
+}
+/*.............Image Dropdown..........*/
+ul .list_item .list_link img{
+    transition: .5s;
+    top: 38%;
+    position: absolute;
+}
+ul .list_item .list_link .home_img{
+    left: 30%;
+}
+ul .list_item .list_link .b_img{
+    left: 22%;
+}
+ul .list_item .list_link .pro_img{
+    left: 7%;
+}
+ul .list_item .list_link .sp_img{
+    left: 25%;
+}
+ul .list_item:hover .list_link img{
+    position: absolute;
+    top: -175px;
+    z-index: 10;
+    left: 45%;
+    animation: img_hover .5s ease forwards;
+}
+@keyframes img_hover{
+    0%{
+        transform: scale(1);
+    }
+    80%{
+        transform: scale(4.5);
+    }
+    100%{
+        transform: scale(4);
+    }
+}
+/*..........Inside Dropdown .........*/
+.inside_p{
+    text-align: center;
+    color: white;
+    transition: .5s;
+    display:block;
+    font-weight: bolder;
+}
+.list_item:hover .dropdown_menu .inside_p{
+    animation: .5s ease inside_p alternate;
+}
+@keyframes inside_p{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-150px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+/*.... custom...Smooth....*/
+#smooth{
+    transition: .5s;
+}
+.list_item:hover #smooth{
+    margin-left: -15px;
+}
+/*............Footer Child Dropdown...........*/
+.product_drop{
+    top: 0%;
+    transition: .5s;
+    transition-property: margin;
+    transition-delay: .5s;
+    background: #EE498C;
+    visibility: hidden;
+    left: 0%;
+}
+
+footer ul li:hover .up_hover .product_drop_right1{
+    visibility: visible;
+    margin-left: 100%;
+}
+footer ul li:hover .up_hover .product_drop_left1{
+    visibility: visible;
+    margin-left: -100%;
+}
+
+.pro_drop_inside{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: space-between;
+}
+.pro_drop_inside .dropdown_item{
+    width: 100%;
+    padding: 5px 0px 5px 15px;
+}
+.dropdown_link{
+    position: relative;
+    display: block;
+    width: 100%;
+    color: white;
+    font-weight: bolder;
+
+}
+.dropdown_link:hover{
+    color: yellow;
+}
+.dropdown_link::before{
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255,.2);
+    top: 0px;
+    left: 0px;
+}
+.right_tr_hover:hover .product_drop_right2{
+    margin-left: 100%!important;
+    visibility: visible;
+    z-index: -1;
+}
+
+.dropdown_padding{
+    list-style: none;
+    margin: 0px;
+    padding: 5px 0px 5px 15px;
+}
+.link_padding{
+    padding: 5px;
+}
+.right_arrow_link,.left_arrow_link{
+    position: relative;
+}
+.right_arrow_link::after,
+.left_arrow_link::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.right_arrow_link:hover::after,
+.left_arrow_link:hover::after{
+    color: white;
+}
+.right_arrow_link::after{
+    right: 10px;
+    content: "\f105";
+}
+.left_arrow_link::after{
+    left: -10px;
+    content: "\f104";
+}
+.dropdown_sp{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    visibility: hidden;
+    transition: .5s;
+    top: 0px;
+    background: #EE498C;
+}
+.left_tr_hover:hover .dropdown_sp{
+    margin-left: -100%;
+    visibility: visible;
+    z-index: -1;
+
+}
